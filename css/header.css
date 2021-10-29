@@ -1,0 +1,161 @@
+.header {
+    background-color: #a1b7c8;
+    min-height: 60px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.header__logo {
+  width: 124px;  
+}
+
+.header__contacts {
+   display: none;
+   position: absolute;
+   background-color: #a1b7c8;
+   top: 61px;
+   left: 0;
+   right: 0;
+   padding: 30px 15px;
+   color: #fff;
+}
+
+.header__contacts-burger {
+    display: block;
+    width: 27px;
+    height: 14px;
+    background-image: url(../img/menu.svg);
+}
+
+.contacts__item {
+    margin-bottom: 50px;
+}
+
+.contacts__item:last-child {
+    margin-bottom: 0;
+}
+
+.contacts__head {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25px;
+    margin-bottom: 7px;
+    text-transform: uppercase;
+}
+
+.contacts__head_social {
+    margin-bottom: 12px;
+}
+
+.contacts__link {
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.contacts__social-list {
+    display: flex;
+}
+
+.contacts__social-item:not(:last-child) {
+    margin-right: 18px;
+}
+
+.contacts__social-link {
+    display: block;
+    width: 26px;
+    height: 26px;
+    background-image: center;
+    background-repeat: no-repeat;
+}
+
+.contacts__social-link_whatsapp{
+    background-image:url("../img/whatsap.svg");
+    cursor: pointer;
+}
+
+.contacts__social-link_insta{
+    background-image: url("../img/insta.svg");
+    cursor: pointer;
+}
+
+.contacts__social-link_fb{
+    background-image: url("../img/facebook.svg");
+    cursor: pointer;
+}
+
+.contacts__social-link_tg{
+    background-image: url("../img/tg.svg");
+    cursor: pointer;
+}
+
+/* Медиа запросы */
+
+@media (min-width: 768px) {
+    .header {
+        min-height: 100px;
+        padding: 28px 0;
+    }
+
+    .header__logo {
+        width: 180px;
+    }
+
+    .header__contacts {
+        top: 101px;
+        padding: 40px;
+    }
+
+    .contacts__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .contacts__item {
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .header {
+        padding: 50px 0;
+    }
+
+    .header__container {
+        height: 100%;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 0 20px;
+    }
+
+    .header__contacts {
+        display: block;
+        position: static;
+        padding: 0;
+    }
+
+    .contacts__list {
+        flex-direction: column;
+    }
+
+    .contacts__item:not(:last-child) {
+        margin-bottom: 50px;
+    }
+
+    .header__contacts-burger {
+        display: none;
+    }
+}
+
+@media (min-width: 1440px) {
+    .header {
+        padding-top: 60px;
+    }
+}
